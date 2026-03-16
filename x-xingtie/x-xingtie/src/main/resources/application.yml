@@ -1,0 +1,35 @@
+server:
+  port: 1111
+  address: 0.0.0.0  # 🔧 表示所有主机都能访问，包括其他设备
+
+spring:
+  datasource:
+    username: root
+    password: 123456
+    url: jdbc:mysql:///cainiao
+
+  redis:
+    port: 6379
+    host: localhost
+
+
+    logging:
+      level:
+        com:
+          lantu:
+            mapper=debug:
+
+
+
+#    con.lantu: debug
+#    con.lantu.mapper: debug
+#
+#mybaatis:
+#  configuration:
+#    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+mybatis-plus:
+  global-config:
+    db-config:
+      logic-delete-field: deleted
+      logic-not-delete-value: 0
+      logic-delete-value: 1
