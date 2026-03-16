@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:map="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/orientationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="姿态角信息"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:background="#DDDDDD" />
+
+    <TextView
+        android:id="@+id/locationText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="位置信息"
+        android:layout_below="@id/orientationText"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:background="#EEEEEE" />
+
+    <com.amap.api.maps.MapView
+        android:id="@+id/mapView"
+        android:layout_width="match_parent"
+        android:layout_height="316dp"
+        android:layout_below="@id/locationText"
+        android:layout_marginTop="3dp" />
+
+    <SurfaceView
+        android:id="@+id/cameraView"
+        android:layout_width="match_parent"
+        android:layout_height="319dp"
+        android:layout_below="@id/mapView"
+        android:layout_marginTop="6dp" />
+</RelativeLayout>
